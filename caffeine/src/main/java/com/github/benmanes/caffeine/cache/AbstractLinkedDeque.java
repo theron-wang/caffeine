@@ -342,7 +342,6 @@ abstract class AbstractLinkedDeque<E> extends AbstractCollection<E> implements L
   }
 
   @Override
-  @SuppressWarnings("NullAway")
   public PeekingIterator<E> iterator() {
     return new AbstractLinkedIterator(first) {
       @Override @Nullable E computeNext() {
