@@ -1,0 +1,4 @@
+/.../AbstractLinkedDeque.java:346: error: [NullAway] passing @Nullable parameter 'first'
+where @NonNull is required
+    return new AbstractLinkedIterator(first) {
+                                      ^
