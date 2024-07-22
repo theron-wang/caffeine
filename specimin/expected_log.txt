@@ -1,0 +1,3 @@
+BoundedLocalCache.java:589: error: [NullAway] dereferenced expression candidate is @Nullable
+        candidate.getPreviousInAccessOrder();
+                 ^
