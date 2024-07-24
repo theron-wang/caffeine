@@ -1,0 +1,19 @@
+/Users/ben/projects/caffeine/guava/src/main/java/com/github/benmanes/caffeine/guava/CaffeinatedGuavaCache.java:156:
+warning: [NullAway] @NonNull field CaffeinatedGuavaCache$AsMapView.entrySet not initialized
+    @Nullable EntrySetView entrySet;
+                           ^
+    (see http://t.uber.com/nullaway )
+  Did you mean '@SuppressWarnings("NullAway.Init") @Nullable EntrySetView entrySet;'?
+/Users/ben/projects/caffeine/guava/src/main/java/com/github/benmanes/caffeine/guava/CaffeinatedGuavaCache.java:157:
+warning: [NullAway] @NonNull field CaffeinatedGuavaCache$AsMapView.keySet not initialized
+    @Nullable KeySetView keySet;
+                         ^
+    (see http://t.uber.com/nullaway )
+  Did you mean '@SuppressWarnings("NullAway.Init") @Nullable KeySetView keySet;'?
+/Users/ben/projects/caffeine/guava/src/main/java/com/github/benmanes/caffeine/guava/CaffeinatedGuavaCache.java:158:
+warning: [NullAway] @NonNull field CaffeinatedGuavaCache$AsMapView.values not initialized
+    @Nullable ValuesView values;
+                         ^
+    (see http://t.uber.com/nullaway )
+  Did you mean '@SuppressWarnings("NullAway.Init") @Nullable ValuesView values;'?
+3 warnings
