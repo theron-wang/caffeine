@@ -1,0 +1,44 @@
+/Users/ben/projects/caffeine/caffeine/src/javaPoet/java/com/github/benmanes/caffeine/cache/NodeFactoryGenerator.java:153: error: An unhandled exception was thrown by the Error Prone static analysis plugin.
+    features.add((Feature) combination.get(0));
+            ^
+     Please report this at https://github.com/google/error-prone/issues/new and include the following:
+
+     error-prone version: 2.23.0
+     BugPattern: NullAway
+     Stack Trace:
+     com.google.common.util.concurrent.UncheckedExecutionException: java.lang.NullPointerException: castToNonNull failed!
+  	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2086)
+  	at com.google.common.cache.LocalCache.get(LocalCache.java:4012)
+  	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4035)
+  	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:5013)
+  	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:5020)
+  	at com.uber.nullaway.dataflow.DataFlow.dataflow(DataFlow.java:157)
+  	at com.uber.nullaway.dataflow.DataFlow.resultFor(DataFlow.java:290)
+  	at com.uber.nullaway.dataflow.DataFlow.resultForExpr(DataFlow.java:266)
+  	at com.uber.nullaway.dataflow.DataFlow.expressionDataflow(DataFlow.java:208)
+  	at com.uber.nullaway.dataflow.AccessPathNullnessAnalysis.getNullness(AccessPathNullnessAnalysis.java:131)
+  	at com.uber.nullaway.NullAway.nullnessFromDataflow(NullAway.java:2415)
+  	at com.uber.nullaway.NullAway.mayBeNullExpr(NullAway.java:2393)
+  	at com.uber.nullaway.NullAway.matchDereference(NullAway.java:2442)
+  	at com.uber.nullaway.NullAway.matchMemberSelect(NullAway.java:548)
+  	at com.google.errorprone.scanner.ErrorProneScanner.processMatchers(ErrorProneScanner.java:449)
+...
+  Caused by: java.lang.NullPointerException: castToNonNull failed!
+  	at com.uber.nullaway.NullabilityUtil.castToNonNull(NullabilityUtil.java:409)
+  	at com.uber.nullaway.GenericsChecks.getGenericReturnNullnessAtInvocation(GenericsChecks.java:791)
+  	at com.uber.nullaway.dataflow.AccessPathNullnessPropagation.genericReturnIsNullable(AccessPathNullnessPropagation.java:1031)
+  	at com.uber.nullaway.dataflow.AccessPathNullnessPropagation.returnValueNullness(AccessPathNullnessPropagation.java:1008)
+  	at com.uber.nullaway.dataflow.AccessPathNullnessPropagation.visitMethodInvocation(AccessPathNullnessPropagation.java:924)
+  	at com.uber.nullaway.dataflow.AccessPathNullnessPropagation.visitMethodInvocation(AccessPathNullnessPropagation.java:139)
+  	at org.checkerframework.nullaway.dataflow.cfg.node.MethodInvocationNode.accept(MethodInvocationNode.java:122)
+  	at org.checkerframework.nullaway.dataflow.analysis.AbstractAnalysis.callTransferFunction(AbstractAnalysis.java:349)
+  	at org.checkerframework.nullaway.dataflow.analysis.ForwardAnalysisImpl.callTransferFunction(ForwardAnalysisImpl.java:377)
+  	at org.checkerframework.nullaway.dataflow.analysis.ForwardAnalysisImpl.performAnalysisBlock(ForwardAnalysisImpl.java:151)
+  	at org.checkerframework.nullaway.dataflow.analysis.ForwardAnalysisImpl.performAnalysis(ForwardAnalysisImpl.java:105)
+  	at com.uber.nullaway.dataflow.DataFlow$1.load(DataFlow.java:93)
+  	at com.uber.nullaway.dataflow.DataFlow$1.load(DataFlow.java:85)
+  	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3571)
+  	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2313)
+  	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2190)
+  	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2080)
+  	... 249 more
