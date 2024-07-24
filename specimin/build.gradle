@@ -18,12 +18,9 @@ import net.ltgt.gradle.errorprone.CheckSeverity
 
 tasks.withType(JavaCompile) {
     options.errorprone {
-        disableAllChecks=true
+        disableAllChecks = true
         check('NullAway', CheckSeverity.ERROR)
         option('NullAway:AnnotatedPackages', 'com.github.benmanes.caffeine')
-
-        nullaway {
-            isJSpecifyMode = true
-        }
+        option('NullAway:JSpecifyMode', 'true')
     }
 }
