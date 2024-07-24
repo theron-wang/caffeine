@@ -21,5 +21,9 @@ tasks.withType(JavaCompile) {
         disableAllChecks=true
         check('NullAway', CheckSeverity.ERROR)
         option('NullAway:AnnotatedPackages', 'com.github.benmanes.caffeine')
+
+        nullaway {
+            isJSpecifyMode = true
+        }
     }
 }
