@@ -8,8 +8,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'com.uber.nullaway:nullaway:0.10.12'
-    annotationProcessor 'com.uber.nullaway:nullaway:0.10.12'
+    compileOnly 'com.uber.nullaway:nullaway:0.10.16'
+    annotationProcessor 'com.uber.nullaway:nullaway:0.10.16'
     compileOnly 'com.google.errorprone:error_prone_core:2.29.0'
     annotationProcessor 'com.google.errorprone:error_prone_core:2.29.0'
 }
