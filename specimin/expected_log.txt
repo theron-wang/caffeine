@@ -1,0 +1,13 @@
+/Users/ben/projects/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:918: error: An unhandled exception was thrown by the Error Prone static analysis plugin.
+        ? new AsyncEvictionListener(castedListener)
+        ^
+     Please report this at https://github.com/google/error-prone/issues/new and include the following:
+
+     error-prone version: 2.20.0
+     BugPattern: NullAway
+     Stack Trace:
+     java.lang.RuntimeException: Number of types arguments in com.github.benmanes.caffeine.cache.RemovalListener does not match @org.checkerframework.checker.nullness.qual.Nullable com.github.benmanes.caffeine.cache.RemovalListener<K1,V1>
+        at com.uber.nullaway.GenericsChecks.compareNullabilityAnnotations(GenericsChecks.java:312)
+        at com.uber.nullaway.GenericsChecks.checkTypeParameterNullnessForConditionalExpression(GenericsChecks.java:439)
+        at com.uber.nullaway.NullAway.matchConditionalExpression(NullAway.java:1491)
+        at com.google.errorprone.scanner.ErrorProneScanner.processMatchers(ErrorProneScanner.java:449)
