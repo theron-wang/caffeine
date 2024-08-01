@@ -151,7 +151,6 @@ class CaffeinatedGuavaCache<K, V> implements Cache<K, V>, Serializable {
     cache.cleanUp();
   }
 
-  @SuppressWarnings("NullAway.Init")
   final class AsMapView extends ForwardingConcurrentMap<K, V> {
     @Nullable EntrySetView entrySet;
     @Nullable KeySetView keySet;

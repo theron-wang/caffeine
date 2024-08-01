@@ -19,7 +19,7 @@ import net.ltgt.gradle.errorprone.CheckSeverity
 tasks.withType(JavaCompile) {
     options.errorprone {
         disableAllChecks=true
-        check('NullAway', CheckSeverity.WARN)
+        check('NullAway', CheckSeverity.ERROR)
         option('NullAway:AnnotatedPackages', 'com.github.benmanes.caffeine.guava')
     }
 }
